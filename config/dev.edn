@@ -1,0 +1,5 @@
+{:influxdb {:db "_internal"}
+ :retrieval {:lookback "10m"
+             :tags ["database"]
+             :fields ["WritePointsOK"]
+             }}

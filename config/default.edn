@@ -1,0 +1,17 @@
+{
+ :influxdb {:uri "http://localhost:8086"
+            :user "root"
+            :pass "root"
+            :db "_internal"
+            :connection-config {:connect-timeout 1000
+                                :read-timeout 5000}}
+ :retrieval {:lookback "10m"
+             :tags []
+             :fields []
+             :conditions []
+             :measurement "httpd"}
+ :scheduler {:interval "1m"}
+ :present {:delay {:min 1 ;; green to red
+                   :max 10
+                   :step 1}}
+}
